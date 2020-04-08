@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>pageflip effect</title>
+	<link href="https://fonts.googleapis.com/css?
+family=Roboto+Condensed&display=swap" rel="stylesheet">
+<link href="style.css" rel="stylesheet">
+
+</head>
+<body>
+	<div class="wrapper">
+  <div class="left">
+	<div class="front">
+	  <div class="sectionWrap">
+		<h1>Drgham Zaref</h1>
+	  <br>
+		<p class="preview">
+Mon Jan 20
+Sunny
+🌤-5°
+Feels like -11
+Night -7°
+POP 10%
+24 Hr Rain -
+24 Hr Snow -
+Wind 20 km/h NW
+Hrs of Sun 9</p>
+<h3>⛈</h3>
+
+
+
+		<button class="openB"><h2>Read more...</h2></button>
+	  </div>
+	</div>
+	<div class="back">
+	  <div class="sectionWrap">
+	  <h1>Mon Jan 20</h1>
+<br><br>
+		<p>Mon Jan 20
+Sunny
+🌤-5°
+Feels like -11
+Night -7°
+POP 10%
+24 Hr Rain -
+24 Hr Snow -
+Wind 20 km/h NW</p>
+
+<img src="https://weather.difer.net/assets/front/img/logo.svg">
+	  </div>
+	</div>
+  </div>
+  <div class="middle">
+	<div class="sectionWrap">
+	  <h1>Tue Jan 21</h1>
+<br><br>
+		<p>
+Tue Jan 21
+A mix of sun and clouds
+🌤-2°
+Feels like -7
+Night -7°
+POP 30%
+24 Hr Rain -
+24 Hr Snow -
+Wind 18 km/h 
+</p>
+
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRQabt_p4Hs8_bk8BNyrNfh15uM9Nzcr6qUMUSRWG8oLKaE5Oyn">
+	</div>
+  </div>
+  <div class="right">
+	  <div class="sectionWrap">
+	  <h1>Jan 22</h1>
+<br><br>
+		<p>Wed Jan 22
+Mainly sunny
+☀️2°
+Feels like -2
+Night -3°
+POP 20%
+24 Hr Rain -
+24 Hr Snow -
+Wind 19 km/h
+</p>
+
+
+
+</div>
+<button class="closeB">✕</button>
+  </div>
+</div>
+<script
+src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js
+"></script>
+<script>
+	$(function(){
+  $(".openB").click(function(){
+	$(".left").addClass("open");
+	setTimeout(function(){
+	  $(".right").addClass("open");
+	}, 250);
+	setTimeout(function(){
+	  $(".back").addClass("open");
+}, 350);
+	$(".closeB").delay(1000).fadeIn();
+  });
+  $(".closeB").click(function(){
+	setTimeout(function(){
+	  $(".left").removeClass("open");
+	}, 250);
+ 
+	$(".right").removeClass("open");
+	setTimeout(function(){
+	  $(".back").removeClass("open");
+	}, 600);
+	$(".closeB").fadeOut();
+  });
+});
+</script>
+</body>
+</html>
